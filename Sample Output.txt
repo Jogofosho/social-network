@@ -1,0 +1,99 @@
+--------------
+User: Kellie
+Followers: 5
+1) Malak
+2) Quin
+3) Craig
+4) Sarah
+5) Garett
+Following: 2
+1) Quin
+2) Sarah
+Recent activity: 
+Malak followed you!
+Quin followed you!
+Craig followed you!
+Sarah followed you!
+You followed Quin.
+You followed Sarah.
+Garett followed you!
+
+--------------
+User: Joe
+Followers: 0
+Following: 1
+1) Garett
+Recent activity: 
+You followed Garett.
+
+--------------
+User: Sarah
+Followers: 3
+1) Quin
+2) Kellie
+3) Garett
+Following: 3
+1) Craig
+2) Kellie
+3) Garett
+Recent activity: 
+Quin followed you!
+You followed Craig.
+You followed Kellie.
+You followed Garett.
+Kellie followed you!
+Garett followed you!
+
+--------------
+User: Craig
+Followers: 1
+1) Sarah
+Following: 2
+1) Kellie
+2) Garett
+Recent activity: 
+You followed Kellie.
+You followed Garett.
+Sarah followed you!
+
+--------------
+User: Malak
+Followers: 0
+Following: 1
+1) Kellie
+Recent activity: 
+You followed Kellie.
+
+--------------
+User: Quin
+Followers: 1
+1) Kellie
+Following: 3
+1) Sarah
+2) Kellie
+3) Garett
+Recent activity: 
+You followed Sarah.
+You followed Kellie.
+You followed Garett.
+Kellie followed you!
+
+--------------
+User: Garett
+Followers: 4
+1) Joe
+2) Quin
+3) Craig
+4) Sarah
+Following: 2
+1) Sarah
+2) Kellie
+Recent activity: 
+Joe followed you!
+Quin followed you!
+Craig followed you!
+Sarah followed you!
+You followed Sarah.
+You followed Kellie.
+
+
