@@ -37,8 +37,21 @@ public class SocialNetworkMain{
             }
         }
         
+        for (int i = 0; i < array.length; i++){
+            int newVal = (int)Math.floor(Math.random()*array.length);
+            for (int j = newVal; j < array.length; j += Math.floor(Math.random()*3)){
+                array[i].userUnfollow(array[j]);
+            }
+        }
+        
         System.out.println(newDict);
-    }
+        
+        System.out.println("Removing a couple users...");
+        newDict.remove(test2);
+        newDict.remove(test3);
+        
+        System.out.println(newDict);
+    }//simulateSmallNetwork
     
 }//SocialNetworkMain
 
