@@ -78,7 +78,7 @@ class User{
                 newUser.userActivity += username+" followed you!\n";
             }
         }
-    }
+    }//userFollow
 
 /**
  * This method allows a user to unfollow someone they are following. The user to be
@@ -97,7 +97,7 @@ class User{
                 newUser.userActivity += username+" unfollowed you.\n";
             }
         }
-    }     
+    }//userUnfollow
     
 /**
  * This is primarily a helper method for the userFollow() method in order to prevent a user
@@ -116,7 +116,7 @@ class User{
         }
         
         return exists;
-    }
+    }//searchFollowing
     
 /**
  * This method returns a list of all of a user's followers.
@@ -129,7 +129,7 @@ class User{
         }
         
         return toReturn;
-    }
+    }//getFollowers
 
 /**
  * This method returns a list of who a user follows.
@@ -142,7 +142,7 @@ class User{
         }
         
         return toReturn;
-    }
+    }//getFollowings
 
 /**
  * toString method which provides all relevant information about a user.
@@ -158,7 +158,7 @@ class User{
                     "Recent activity: \n"+userActivity;
         
         return toReturn;
-    }
+    }//toString
 }//class User
 
 /**
@@ -202,7 +202,7 @@ class Directory{
     
     //instance methods
 /**
- * This receives a new user as a parameter and inserts them into the directory.
+ * This method receives a new user as a parameter and inserts them into the directory.
  */  
     public void insert(User newUser){
         int index = hash(newUser.username);
@@ -215,6 +215,28 @@ class Directory{
         
     }//insert
 
+/**
+ * This method receives a user as a parameter that is to be removed from the directory. A
+ * user cannot be removed if they do not exist in the directory in the first place.
+ */
+    public void remove(User newUser){
+        int index = hash(newUser.username);
+        
+        if (dictionary[index] != null){
+            Node prev = null;
+            Node curr = dictionary[index];
+            while (curr != null && !(newUser.username.equals(curr.user.username))){
+                prev = curr;
+                curr = curr.next;
+            }
+            if (prev == null){
+                dictionary[index] = null;
+            } else {
+                prev.next = curr.next;
+            }
+        }
+    }//remove
+ 
 /**
  * This toString() method prints out all the users currently stored in the directory.
  */
