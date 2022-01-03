@@ -207,10 +207,12 @@ class Directory{
     
     //instance variables
     private Node[] dictionary;
+    private int numUsers;
     
     //constructor
     public Directory(){
         dictionary = new Node[SIZE];
+        numUsers = 0;
     }
     
     //instance methods
@@ -222,8 +224,10 @@ class Directory{
         
         if (dictionary[index] == null){
             dictionary[index] = new Node(newUser, null);
+            numUsers++;
         } else {
             dictionary[index] = new Node(newUser, dictionary[index]);
+            numUsers++;
         }
         
     }//insert
@@ -244,8 +248,10 @@ class Directory{
             }
             if (prev == null){
                 dictionary[index] = null;
+                numUsers--;
             } else {
                 prev.next = curr.next;
+                numUsers--;
             }
         }
     }//remove
@@ -254,7 +260,8 @@ class Directory{
  * This toString() method prints out all the users currently stored in the directory.
  */
     public String toString(){
-        String users = "";
+        String users = "************\n"+"Number of users in the network: "+
+                        numUsers+"\n************\n";
         
         for (int i = 0; i < SIZE; i++){
             if (dictionary[i] != null){
