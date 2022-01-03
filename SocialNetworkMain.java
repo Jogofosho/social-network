@@ -61,7 +61,7 @@ class User{
         userFollowers = new ArrayList<User>();
     }
     
-    //instance variables
+    //instance methods
 /**
  * This method allows one user to follow another. A new user to be followed is
  * passed in as a parameter, and all relevant instance variables are updated. A
