@@ -81,6 +81,25 @@ class User{
     }
 
 /**
+ * This method allows a user to unfollow someone they are following. The user to be
+ * unfollowed is passed in as a parameter, and the method checks if the user is in the
+ * list of users being followed before unfollowing the user passed in as a parameter. A
+ * user cannot unfollow themselves or unfollow the same user again.
+ */
+    public void userUnfollow(User newUser){
+        if (newUser != this){
+            if (searchFollowing(newUser)){
+                userFollowing.remove(newUser);
+                newUser.userFollowers.remove(this);
+                following--;
+                newUser.followers--;
+                userActivity += "You unfollowed "+newUser.username+".\n";
+                newUser.userActivity += username+" unfollowed you.\n";
+            }
+        }
+    }     
+    
+/**
  * This is primarily a helper method for the userFollow() method in order to prevent a user
  * from following a user that they already follow. Based on the user that is passed in as
  * a parameter, this method determines if the current instance of User this method is called
