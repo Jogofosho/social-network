@@ -255,7 +255,29 @@ class Directory{
             }
         }
     }//remove
- 
+
+/**
+ * This method receives a username and searches the directory for that user. Returns true
+ * if that user exists, false otherwise. Primarily used as a helper method to prevent duplicate
+ * usernames.
+ */
+    public boolean search(String username){
+        boolean exists = false;
+        int index = hash(username);
+        Node curr = dictionary[index];
+        
+        if (curr != null){
+            while (curr != null && !(username.equals(curr.user.username))){
+                curr = curr.next;
+            }
+            if (username.equals(curr.user.username)){
+                exists = true;
+            }
+        }
+        
+        return exists;
+    }//search
+
 /**
  * This toString() method prints out all the users currently stored in the directory.
  */
