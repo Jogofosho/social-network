@@ -16,7 +16,11 @@ public class SocialNetworkMain{
     }//main
     
     public static void simulateSmallNetwork(){
+        //create directory
+        System.out.println("Creating a new directory of users...");
         Directory newDict = new Directory();
+        //create users
+        System.out.println("Creating users...");
         User test = new User("Joe");
         User test2 = new User("Malak");
         User test3 = new User("Quin");
@@ -24,26 +28,40 @@ public class SocialNetworkMain{
         User test5 = new User("Sarah");
         User test6 = new User("Kellie");
         User test7 = new User("Garett");
-        User[] array = {test,test2,test3,test4,test5,test6,test7};
+        User test8 = new User("Joe");
         
-        for (int i = 0; i < array.length; i++){
-            newDict.insert(array[i]);
+        //store unique users in array
+        User[] array = {test,test2,test3,test4,test5,test6,test7,test8};
+        System.out.println("Usernames created:");
+        for (User user : array){
+            System.out.println(user.username);
         }
         
+        //add users to the directory
+        System.out.println("Adding users to the directory...");
+        try {
+            for (int i = 0; i < array.length; i++){
+                newDict.insert(array[i]);
+            }
+        } catch (UserExistsException uee){
+            System.out.println(uee.getMessage()+"\n");
+        }
+        
+        //simulate following
+        System.out.println("Randomly following each other...");
         for (int i = 0; i < array.length; i++){
-            int newVal = (int)Math.floor(Math.random()*array.length);
-            for (int j = newVal; j < array.length; j += Math.floor(Math.random()*3)){
-                array[i].userFollow(array[j]);
+            for (int j = 0; j < array.length; j++){
+                array[i].userFollow(newDict.getRandomUser());
+            }
+        }
+        System.out.println("Randomly unfollowing each other...");
+        for (int i = 0; i < array.length; i++){
+            for (int j = 0; j < array.length; j++){
+                array[i].userUnfollow(newDict.getRandomUser());
             }
         }
         
-        for (int i = 0; i < array.length; i++){
-            int newVal = (int)Math.floor(Math.random()*array.length);
-            for (int j = newVal; j < array.length; j += Math.floor(Math.random()*3)){
-                array[i].userUnfollow(array[j]);
-            }
-        }
-        
+        //final report of the directory
         System.out.println(newDict);
         
         System.out.println("Removing a couple users...");
@@ -51,6 +69,7 @@ public class SocialNetworkMain{
         newDict.remove(test3);
         
         System.out.println(newDict);
+        System.out.println("Program finished running.");
     }//simulateSmallNetwork
     
 }//SocialNetworkMain
@@ -206,8 +225,8 @@ class Directory{
     private final int HASH_PRIME = 23; //the prime number used for hashing
     
     //instance variables
-    private Node[] dictionary;
-    private int numUsers;
+    protected Node[] dictionary;
+    protected int numUsers;
     
     //constructor
     public Directory(){
@@ -279,6 +298,39 @@ class Directory{
     }//search
 
 /**
+ * This method returns a randomly selected user from the directory. Used as a helper method 
+ * for testing.
+ */
+    public User getRandomUser(){
+        User toReturn = null;
+        
+        while (toReturn == null){
+            for (int i = 0; i < SIZE; i++){
+                if (dictionary[i] != null){
+                    double randomNum = Math.random();
+                    Node curr = dictionary[i];
+                    while (curr != null){
+                        if (randomNum > 0.5){
+                            return curr.user;
+                        } else {
+                            curr = curr.next;
+                        }//if-else
+                    }//while
+                }//if
+            }//for
+        }//while
+        
+        return toReturn;
+    }//getRandomUser
+    
+/**
+ * Returns the dictionary's size.
+ */
+    public int getDictSize(){
+        return SIZE;
+    }//getDictSize    
+    
+/**
  * This toString() method prints out all the users currently stored in the directory.
  */
     public String toString(){
@@ -323,3 +375,11 @@ class Directory{
     }//hash
     
 }//Directory
+
+class UserExistsException extends Exception{
+    
+    public UserExistsException(String message){
+        super(message);
+    }
+    
+}//UserExistsException
