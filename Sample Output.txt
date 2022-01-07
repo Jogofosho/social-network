@@ -1,126 +1,158 @@
+Creating a new directory of users...
+Creating users...
+Usernames created:
+Joe
+Malak
+Quin
+Craig
+Sarah
+Kellie
+Garett
+Joe
+Adding users to the directory...
+Cannot create user with the name Joe as a user with this name already exists.
+
+Randomly following each other...
+Randomly unfollowing each other...
 ************
 Number of users in the network: 7
 ************
 --------------
 User: Kellie
-Followers: 1
+Followers: 0
+Following: 2
 1) Craig
-Following: 3
-1) Malak
-2) Quin
-3) Sarah
+2) Sarah
 Recent activity: 
+Joe followed you!
+Malak followed you!
 Quin followed you!
 Craig followed you!
 Sarah followed you!
-You followed Malak.
-You followed Quin.
 You followed Craig.
 You followed Sarah.
+You followed Joe.
+Garett followed you!
+Joe followed you!
+Joe unfollowed you.
+Malak unfollowed you.
 Quin unfollowed you.
+Craig unfollowed you.
 Sarah unfollowed you.
-You unfollowed Craig.
+You unfollowed Joe.
+Garett unfollowed you.
+Joe unfollowed you.
 
 --------------
 User: Joe
 Followers: 1
-1) Sarah
-Following: 1
-1) Garett
+1) Craig
+Following: 0
 Recent activity: 
-You followed Quin.
 You followed Sarah.
-You followed Garett.
+You followed Kellie.
+Malak followed you!
+Quin followed you!
+Craig followed you!
 Sarah followed you!
-You unfollowed Quin.
+Kellie followed you!
+Garett followed you!
+You unfollowed Kellie.
 You unfollowed Sarah.
+Malak unfollowed you.
+Quin unfollowed you.
+Sarah unfollowed you.
+Kellie unfollowed you.
+Garett unfollowed you.
 
 --------------
 User: Sarah
 Followers: 1
 1) Kellie
-Following: 2
-1) Joe
-2) Quin
-Recent activity: 
-Joe followed you!
-Craig followed you!
-You followed Joe.
-You followed Quin.
-You followed Craig.
-You followed Kellie.
-Kellie followed you!
-Garett followed you!
-Joe unfollowed you.
-Craig unfollowed you.
-You unfollowed Craig.
-You unfollowed Kellie.
-Garett unfollowed you.
-
---------------
-User: Craig
-Followers: 1
-1) Garett
-Following: 2
-1) Quin
-2) Kellie
-Recent activity: 
-You followed Quin.
-You followed Sarah.
-You followed Kellie.
-Sarah followed you!
-Kellie followed you!
-Garett followed you!
-You unfollowed Sarah.
-Sarah unfollowed you.
-Kellie unfollowed you.
-
---------------
-User: Malak
-Followers: 2
-1) Kellie
-2) Garett
 Following: 0
-Recent activity: 
-You followed Garett.
-Kellie followed you!
-Garett followed you!
-You unfollowed Garett.
-
---------------
-User: Quin
-Followers: 3
-1) Craig
-2) Sarah
-3) Kellie
-Following: 0
-Recent activity: 
-Joe followed you!
-You followed Kellie.
-You followed Garett.
-Craig followed you!
-Sarah followed you!
-Kellie followed you!
-Joe unfollowed you.
-You unfollowed Kellie.
-You unfollowed Garett.
-
---------------
-User: Garett
-Followers: 1
-1) Joe
-Following: 2
-1) Malak
-2) Craig
 Recent activity: 
 Joe followed you!
 Malak followed you!
 Quin followed you!
-You followed Malak.
-You followed Craig.
-You followed Sarah.
+Craig followed you!
+You followed Joe.
+You followed Kellie.
+Kellie followed you!
+Garett followed you!
+Joe followed you!
+Joe unfollowed you.
 Malak unfollowed you.
 Quin unfollowed you.
+Craig unfollowed you.
+You unfollowed Kellie.
+You unfollowed Joe.
+Garett unfollowed you.
+Joe unfollowed you.
+
+--------------
+User: Craig
+Followers: 2
+1) Malak
+2) Kellie
+Following: 1
+1) Joe
+Recent activity: 
+Malak followed you!
+Quin followed you!
+You followed Kellie.
+You followed Quin.
+You followed Sarah.
+You followed Joe.
+Kellie followed you!
+Quin unfollowed you.
+You unfollowed Quin.
+You unfollowed Kellie.
+You unfollowed Sarah.
+
+--------------
+User: Malak
+Followers: 1
+1) Garett
+Following: 1
+1) Craig
+Recent activity: 
+You followed Kellie.
+You followed Sarah.
+You followed Joe.
+You followed Craig.
+Garett followed you!
+You unfollowed Kellie.
+You unfollowed Joe.
+You unfollowed Sarah.
+
+--------------
+User: Quin
+Followers: 0
+Following: 0
+Recent activity: 
+You followed Craig.
+You followed Kellie.
+You followed Sarah.
+You followed Joe.
+Craig followed you!
+You unfollowed Craig.
+You unfollowed Joe.
+You unfollowed Kellie.
+You unfollowed Sarah.
+Craig unfollowed you.
+
+--------------
+User: Garett
+Followers: 0
+Following: 1
+1) Malak
+Recent activity: 
+You followed Kellie.
+You followed Sarah.
+You followed Malak.
+You followed Joe.
+You unfollowed Kellie.
+You unfollowed Joe.
 You unfollowed Sarah.
 
 
@@ -130,94 +162,109 @@ Number of users in the network: 5
 ************
 --------------
 User: Kellie
-Followers: 1
+Followers: 0
+Following: 2
 1) Craig
-Following: 3
-1) Malak
-2) Quin
-3) Sarah
+2) Sarah
 Recent activity: 
+Joe followed you!
+Malak followed you!
 Quin followed you!
 Craig followed you!
 Sarah followed you!
-You followed Malak.
-You followed Quin.
 You followed Craig.
 You followed Sarah.
+You followed Joe.
+Garett followed you!
+Joe followed you!
+Joe unfollowed you.
+Malak unfollowed you.
 Quin unfollowed you.
+Craig unfollowed you.
 Sarah unfollowed you.
-You unfollowed Craig.
+You unfollowed Joe.
+Garett unfollowed you.
+Joe unfollowed you.
 
 --------------
 User: Joe
 Followers: 1
-1) Sarah
-Following: 1
-1) Garett
+1) Craig
+Following: 0
 Recent activity: 
-You followed Quin.
 You followed Sarah.
-You followed Garett.
+You followed Kellie.
+Malak followed you!
+Quin followed you!
+Craig followed you!
 Sarah followed you!
-You unfollowed Quin.
+Kellie followed you!
+Garett followed you!
+You unfollowed Kellie.
 You unfollowed Sarah.
+Malak unfollowed you.
+Quin unfollowed you.
+Sarah unfollowed you.
+Kellie unfollowed you.
+Garett unfollowed you.
 
 --------------
 User: Sarah
 Followers: 1
 1) Kellie
-Following: 2
-1) Joe
-2) Quin
-Recent activity: 
-Joe followed you!
-Craig followed you!
-You followed Joe.
-You followed Quin.
-You followed Craig.
-You followed Kellie.
-Kellie followed you!
-Garett followed you!
-Joe unfollowed you.
-Craig unfollowed you.
-You unfollowed Craig.
-You unfollowed Kellie.
-Garett unfollowed you.
-
---------------
-User: Craig
-Followers: 1
-1) Garett
-Following: 2
-1) Quin
-2) Kellie
-Recent activity: 
-You followed Quin.
-You followed Sarah.
-You followed Kellie.
-Sarah followed you!
-Kellie followed you!
-Garett followed you!
-You unfollowed Sarah.
-Sarah unfollowed you.
-Kellie unfollowed you.
-
---------------
-User: Garett
-Followers: 1
-1) Joe
-Following: 2
-1) Malak
-2) Craig
+Following: 0
 Recent activity: 
 Joe followed you!
 Malak followed you!
 Quin followed you!
-You followed Malak.
-You followed Craig.
-You followed Sarah.
+Craig followed you!
+You followed Joe.
+You followed Kellie.
+Kellie followed you!
+Garett followed you!
+Joe followed you!
+Joe unfollowed you.
 Malak unfollowed you.
 Quin unfollowed you.
+Craig unfollowed you.
+You unfollowed Kellie.
+You unfollowed Joe.
+Garett unfollowed you.
+Joe unfollowed you.
+
+--------------
+User: Craig
+Followers: 2
+1) Malak
+2) Kellie
+Following: 1
+1) Joe
+Recent activity: 
+Malak followed you!
+Quin followed you!
+You followed Kellie.
+You followed Quin.
+You followed Sarah.
+You followed Joe.
+Kellie followed you!
+Quin unfollowed you.
+You unfollowed Quin.
+You unfollowed Kellie.
+You unfollowed Sarah.
+
+--------------
+User: Garett
+Followers: 0
+Following: 1
+1) Malak
+Recent activity: 
+You followed Kellie.
+You followed Sarah.
+You followed Malak.
+You followed Joe.
+You unfollowed Kellie.
+You unfollowed Joe.
 You unfollowed Sarah.
 
 
+Program finished running.
