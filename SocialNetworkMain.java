@@ -74,6 +74,10 @@ public class SocialNetworkMain{
     
 }//SocialNetworkMain
 
+/******
+ * CLASS: User
+ ******/
+
 class User{
     //instance variables
     protected String username;
@@ -193,11 +197,13 @@ class User{
     }//toString
 }//class User
 
-/**
+/******
+ * CLASS: Directory
+ *
  * This class uses a dictionary to store a directory of all the users currently registered
  * in the social network. The user's username is used as the key that is hashed to a certain
  * index in the dictionary.
- */
+ ******/
 
 class Directory{
     /**
@@ -376,6 +382,10 @@ class Directory{
     
 }//Directory
 
+/******
+ * CLASS: UserExistsException
+ ******/
+ 
 class UserExistsException extends Exception{
     
     public UserExistsException(String message){
