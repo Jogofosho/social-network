@@ -244,17 +244,21 @@ class Directory{
 /**
  * This method receives a new user as a parameter and inserts them into the directory.
  */  
-    public void insert(User newUser){
+    public void insert(User newUser) throws UserExistsException{
         int index = hash(newUser.username);
         
-        if (dictionary[index] == null){
-            dictionary[index] = new Node(newUser, null);
-            numUsers++;
+        if (!(this.search(newUser.username))){
+            if (dictionary[index] == null){
+                dictionary[index] = new Node(newUser, null);
+                numUsers++;
+            } else {
+                dictionary[index] = new Node(newUser, dictionary[index]);
+                numUsers++;
+            }
         } else {
-            dictionary[index] = new Node(newUser, dictionary[index]);
-            numUsers++;
+            throw new UserExistsException("Cannot create user with the name "+newUser.username+
+                        " as a user with this name already exists.");
         }
-        
     }//insert
 
 /**
